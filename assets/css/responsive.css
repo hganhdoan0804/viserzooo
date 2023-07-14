@@ -11,6 +11,14 @@
     .navbar-mobile {
         display: none;
     }
+
+    .subscribe-section {
+        margin-bottom: -90px;
+    }
+
+    .footer-section {
+        padding-top: 130px;
+    }
 }
 
 /* Tablet */

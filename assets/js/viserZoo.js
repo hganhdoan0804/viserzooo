@@ -37,7 +37,7 @@ Array.from(animalButtons).forEach(function (element) {
 // Animal section overlay
 const arrayImage = ["animal-card_img-1", "animal-card_img-2",
     "animal-card_img-3", "animal-card_img-4",
-    "animal-card_img-5", "animal-card_img-6",
+    "animal-card_img-5", "animal-card_img-6", "animal-card_img-7",
     "animal-card_img-8", "animal-card_img-9",
     "animal-card_img-10", "animal-card_img-11",
     "animal-card_img-12", "animal-card_img-13",
@@ -53,18 +53,19 @@ let arrayImageIndex = 0;
 Array.from(animalCard).forEach(function (elementCards) {
     elementCards.addEventListener("click", function () {
         let firstChildImage = elementCards.firstElementChild.src;
+        console.log(firstChildImage);
         let imgIndexNumber = firstChildImage.indexOf("img");
         let pngIndexNumber = firstChildImage.indexOf(".png");
         let imageName = firstChildImage.slice(imgIndexNumber + 4, pngIndexNumber);
         // Show animal image
         animalModal.style.display = "flex";
-        animalModalImage.style.backgroundImage = `url(/viserzoo/assets/img/${imageName}.png)`;
+        animalModalImage.style.backgroundImage = `url(/assets/img/${imageName}.png)`;
         for (let i = 0; i < arrayImageLength; i++) {
             if (imageName === arrayImage[i]) {
                 arrayImageIndex = i;
-                console.log(arrayImageIndex);
             }
         }
+        console.log(arrayImageIndex);
     })
 })
 //Move animal image
@@ -72,20 +73,22 @@ const rightButton = document.querySelector(".arrow-right");
 const leftButton = document.querySelector(".arrow-left");
 rightButton.addEventListener("click", function () {
     arrayImageIndex++;
-    console.log(arrayImageIndex);
     if (arrayImageIndex > arrayImageLength - 1) {
         arrayImageIndex = 0;
     }
-    animalModalImage.style.backgroundImage = `url(/viserzoo/assets/img/${arrayImage[arrayImageIndex]}.png)`;
+    animalModalImage.style.backgroundImage = `url(/assets/img/${arrayImage[arrayImageIndex]}.png)`;
+    console.log(arrayImageIndex);
+
 })
 
 leftButton.addEventListener("click", function () {
     arrayImageIndex--;
-    console.log(arrayImageIndex);
     if (arrayImageIndex < 0) {
         arrayImageIndex = arrayImageLength - 1;
     }
-    animalModalImage.style.backgroundImage = `url(/viserzoo/assets/img/${arrayImage[arrayImageIndex]}.png)`;
+    animalModalImage.style.backgroundImage = `url(/assets/img/${arrayImage[arrayImageIndex]}.png)`;
+    console.log(arrayImageIndex);
+
 })
 
 //Click to close animal modal

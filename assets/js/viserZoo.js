@@ -59,7 +59,7 @@ Array.from(animalCard).forEach(function (elementCards) {
         let imageName = firstChildImage.slice(imgIndexNumber + 4, pngIndexNumber);
         // Show animal image
         animalModal.style.display = "flex";
-        animalModalImage.style.backgroundImage = `url(/assets/img/${imageName}.png)`;
+        animalModalImage.style.backgroundImage = `url(https://anhakadoan84.github.io/viserzooo/assets/img/${arrayImage[arrayImageIndex]}.png)`;
         for (let i = 0; i < arrayImageLength; i++) {
             if (imageName === arrayImage[i]) {
                 arrayImageIndex = i;
@@ -76,7 +76,7 @@ rightButton.addEventListener("click", function () {
     if (arrayImageIndex > arrayImageLength - 1) {
         arrayImageIndex = 0;
     }
-    animalModalImage.style.backgroundImage = `url(/assets/img/${arrayImage[arrayImageIndex]}.png)`;
+    animalModalImage.style.backgroundImage = `url(https://anhakadoan84.github.io/viserzooo/assets/img/${arrayImage[arrayImageIndex]}.png)`;
     console.log(arrayImageIndex);
 
 })
@@ -86,7 +86,7 @@ leftButton.addEventListener("click", function () {
     if (arrayImageIndex < 0) {
         arrayImageIndex = arrayImageLength - 1;
     }
-    animalModalImage.style.backgroundImage = `url(/assets/img/${arrayImage[arrayImageIndex]}.png)`;
+    animalModalImage.style.backgroundImage = `url(https://anhakadoan84.github.io/viserzooo/assets/img/${arrayImage[arrayImageIndex]}.png)`;
     console.log(arrayImageIndex);
 
 })

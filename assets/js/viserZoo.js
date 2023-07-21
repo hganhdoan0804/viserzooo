@@ -59,13 +59,12 @@ Array.from(animalCard).forEach(function (elementCards) {
         let imageName = firstChildImage.slice(imgIndexNumber + 4, pngIndexNumber);
         // Show animal image
         animalModal.style.display = "flex";
-        animalModalImage.style.backgroundImage = `url(https://anhakadoan84.github.io/viserzooo/assets/img/${arrayImage[arrayImageIndex]}.png)`;
+        animalModalImage.style.backgroundImage = `url(https://anhakadoan84.github.io/viserzooo/assets/img/${imageName}.png)`;
         for (let i = 0; i < arrayImageLength; i++) {
             if (imageName === arrayImage[i]) {
                 arrayImageIndex = i;
             }
         }
-        console.log(arrayImageIndex);
     })
 })
 //Move animal image
